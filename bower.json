@@ -1,0 +1,24 @@
+{
+  "name": "madtaras-toast",
+  "version": "0.0.1",
+  "homepage": "https://github.com/madtaras/madtaras-toast",
+  "authors": [
+    "Taras Mazurkevych <mad.taras@gmail.com>"
+  ],
+  "description": "Small lib for toasts(notifications).",
+  "main": "[\"lib/madtaras-toast.min.js\", \"lib/madtaras-toast.min.css\"]",
+  "keywords": [
+    "notifications",
+    "toasts",
+    "material",
+    "design"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
