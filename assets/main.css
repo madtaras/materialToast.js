@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.btn {
+    display: block;
+    margin: 30px auto;
+    padding: 0;
+    border-width: 0;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    background-color: #2ecc71;
+    color: #ecf0f1;
+    font-size: 18px;
+    text-transform: uppercase;
+    width: 15em;
+    height: 5em;
+    cursor: pointer;
+}
