@@ -2,6 +2,10 @@
 
 ###  [Demo](http://madtaras.github.io/madtaras-toast)
 
+### Installation
+
+`bower install madtaras-toast`
+
 ### Usage
 
 `madtarasToast.show(toastConfig);`
