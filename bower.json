@@ -9,9 +9,7 @@
   "main": "[\"lib/madtaras-toast.min.js\", \"lib/madtaras-toast.min.css\"]",
   "keywords": [
     "notifications",
-    "toasts",
-    "material",
-    "design"
+    "toasts"
   ],
   "license": "MIT",
   "ignore": [

@@ -6,6 +6,10 @@
 
 `bower install madtaras-toast`
 
+Include these tags into your html.
+* `<link rel="stylesheet" href="bower_components/madtaras-toast/lib/madtaras-toast.min.css">`
+* `<script src="bower_components/madtaras-toast/lib/madtaras-toast.min.js"></script>`
+
 ### Usage
 
 `madtarasToast.show(toastConfig);`
@@ -18,33 +22,54 @@
 
 ---------------
 #### The simplest usage
+
 ```javascript
 madtarasToast.show({
-    'innerText': 'Some text'
+    'innerText': 'Some message'
 });
 ```
+
 #### With custom duration
+
 ```javascript
 madtarasToast.show({
-    'innerText': 'Some text',
-    'duration': 3000
+    'innerText': 'Some message',
+    'duration': 1500
 });
 ```
+
 #### With action button and callback function
+
 ```javascript
 madtarasToast.show({
-    'duration': 3000,
     'innerText': 'Song added',
     'actionInnerText': 'undo',
     'actionCallback': function() {
         madtarasToast.show({
-            'duration': 3000,
-            'innerText': 'undid'
+            'innerText': 'Undid'
         });
     }
 });
 ```
+
+#### Using all functional
+
+```javascript
+madtarasToast.show({
+    'innerText': 'Song added',
+    'duration': 1500,
+    'actionInnerText': 'undo',
+    'actionCallback': function() {
+        madtarasToast.show({
+            'innerText': 'Undid',
+            'duration': 1000
+        });
+    }
+});
+```
+
 #### Changing default duration and styles
+
 ```javascript
 madtarasToast.changeConfig({
     'duration': 3000,

@@ -15,11 +15,18 @@
     border-radius: 2px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
     box-sizing: border-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     visibility: hidden;
-    transform: translateY(100px);
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
 }
 
 @media screen and (max-width: 568px) {
@@ -29,17 +36,25 @@
 }
 
 .madtaras-toast.__fade-in {
-    animation-name: madtarasToastFadeIn;
-    animation-duration: .3s;
-    animation-fill-mode: forwards;
-    animation-play-state: running; 
+    -webkit-animation-name: madtarasToastFadeIn;
+            animation-name: madtarasToastFadeIn;
+    -webkit-animation-duration: .3s;
+            animation-duration: .3s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-play-state: running;
+            animation-play-state: running; 
 }
 
 .madtaras-toast.__fade-out {
-    animation-name: madtarasToastFadeOut;
-    animation-duration: .3s;
-    animation-fill-mode: forwards;
-    animation-play-state: running;
+    -webkit-animation-name: madtarasToastFadeOut;
+            animation-name: madtarasToastFadeOut;
+    -webkit-animation-duration: .3s;
+            animation-duration: .3s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-play-state: running;
+            animation-play-state: running;
 }
 
 .madtaras-toast.__singleline {
@@ -59,24 +74,54 @@
     text-transform: uppercase;
 }
 
-@keyframes madtarasToastFadeIn {
+@-webkit-keyframes madtarasToastFadeIn {
     from {
         visibility: hidden;
-        transform: translateY(100px);
+        -webkit-transform: translateY(100px);
+                transform: translateY(100px);
     }
     to {
         visibility: visible;
-        transform: translateY(0);
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+}
+
+@keyframes madtarasToastFadeIn {
+    from {
+        visibility: hidden;
+        -webkit-transform: translateY(100px);
+                transform: translateY(100px);
+    }
+    to {
+        visibility: visible;
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes madtarasToastFadeOut {
+    from {
+        visibility: visible;
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+    to {
+        visibility: hidden;
+        -webkit-transform: translateY(100px);
+                transform: translateY(100px);
     }
 }
 
 @keyframes madtarasToastFadeOut {
     from {
         visibility: visible;
-        transform: translateY(0);
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
     }
     to {
         visibility: hidden;
-        transform: translateY(100px);
+        -webkit-transform: translateY(100px);
+                transform: translateY(100px);
     }
 }
