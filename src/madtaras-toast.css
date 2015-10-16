@@ -1,0 +1,109 @@
+.madtaras-toast {
+    position: fixed;
+    left: 12px;
+    bottom: 12px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #f1f1f1;
+    word-wrap: break-word;
+    z-index: 99;
+    min-width: 288px;
+    max-width: 568px;
+    background: #323232;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    visibility: hidden;
+    transform: translateY(100px);
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+@media screen and (max-width: 568px) {
+    .madtaras-toast {
+        width: 100vw;
+        bottom: 0;
+        left: 0;
+        border-radius: 0;
+    }
+}
+
+.madtaras-toast.fade-in {
+    animation-name: madtarasToastFadeIn;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    animation-play-state: running; 
+}
+
+.madtaras-toast.fade-out {
+    animation-name: madtarasToastFadeOut;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+.madtaras-toast.singleline {
+    height: 48px;
+    min-height: 48px;
+    max-height: 80px;
+}
+
+.madtaras-toast.multiline {
+    height: 80px;
+    min-height: 48px;
+    max-height: 80px;
+}
+
+.madtaras-toast_action-btn {
+    margin-left: 24px;
+    color: #eeff41;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+@-webkit-keyframes madtarasToastFadeIn {
+    from {
+        visibility: hidden;
+        transform: translateY(100px);
+    }
+    to {
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+
+@keyframes madtarasToastFadeIn {
+    from {
+        visibility: hidden;
+        transform: translateY(100px);
+    }
+    to {
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes madtarasToastFadeOut {
+    from {
+        visibility: visible;
+        transform: translateY(0);
+    }
+    to {
+        visibility: hidden;
+        transform: translateY(100px);
+    }
+}
+
+@keyframes madtarasToastFadeOut {
+    from {
+        visibility: visible;
+        transform: translateY(0);
+    }
+    to {
+        visibility: hidden;
+        transform: translateY(100px);
+    }
+}
