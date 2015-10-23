@@ -39,6 +39,11 @@
 
         currentToast.classList.add('fade-in');
 
+        // hide toast on click
+        currentToast.addEventListener('click', function () {
+            hideToast(currentToast);
+        });
+
         // set timeout to hide toast
         setTimeout(function () {
             hideToast(currentToast);
@@ -64,7 +69,7 @@
     // delete toast from dom
     function deleteToast(toast) {
         if ( !toast ) return;
-        toast.parentNode.removeChild(toast);
+        toast.remove();
         toast = null;
     }
 

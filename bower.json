@@ -1,11 +1,11 @@
 {
   "name": "madtaras-toast",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "homepage": "https://github.com/madtaras/madtaras-toast",
   "authors": [
     "Taras Mazurkevych <mad.taras@gmail.com>"
   ],
-  "description": "Small lib for toasts(notifications).",
+  "description": "Library for material design toasts (notifications) without dependencies.",
   "main": "[\"lib/madtaras-toast.min.js\", \"lib/madtaras-toast.min.css\"]",
   "keywords": [
     "notifications",

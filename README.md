@@ -7,15 +7,14 @@
 `bower install madtaras-toast`
 
 Include these tags into your html.
-* `<link rel="stylesheet" href="bower_components/madtaras-toast/lib/madtaras-toast.min.css">`
-* `<script src="bower_components/madtaras-toast/lib/madtaras-toast.min.js"></script>`
+* `<link rel="stylesheet" href="bower_components/madtaras-toast/lib/madtaras-toast.css">`
+* `<script src="bower_components/madtaras-toast/lib/madtaras-toast.js"></script>`
 
 #### Tested in:
 * Chrome 46
 * Firefox 41
 * Chrome (for Android) 46
 * Safari 7.0.3
-* ie 10
 
 ### Usage
 
