@@ -31,14 +31,14 @@
     }
 }
 
-.madtaras-toast.fade-in {
+.madtaras-toast.madtaras-toast-fade-in {
     animation-name: madtarasToastFadeIn;
     animation-duration: .3s;
     animation-fill-mode: forwards;
     animation-play-state: running; 
 }
 
-.madtaras-toast.fade-out {
+.madtaras-toast.madtaras-toast-fade-out {
     animation-name: madtarasToastFadeOut;
     animation-duration: .3s;
     animation-fill-mode: forwards;

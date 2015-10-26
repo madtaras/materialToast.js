@@ -37,7 +37,7 @@
             currentToast.classList.add('multiline');
         }
 
-        currentToast.classList.add('fade-in');
+        currentToast.classList.add('madtaras-toast-fade-in');
 
         // hide toast on click
         currentToast.addEventListener('click', function () {
@@ -63,7 +63,7 @@
         toast.addEventListener('animationend', function () {
             deleteToast(toast);
         });
-        toast.classList.add('fade-out');
+        toast.classList.add('madtaras-toast-fade-out');
     }
 
     // delete toast from dom
