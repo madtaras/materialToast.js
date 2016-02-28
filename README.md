@@ -1,101 +1,91 @@
-# madtaras-toast
+# MaterialToast.js
 
-###  [Demo](http://madtaras.github.io/madtaras-toast)
+###  [Demo](http://madtaras.github.io/materialToast.js/)
 
 ### Installation
 
-`bower install madtaras-toast`
-
 Include these tags into your html.
-* `<link rel="stylesheet" href="bower_components/madtaras-toast/lib/madtaras-toast.css">`
-* `<script src="bower_components/madtaras-toast/lib/madtaras-toast.js"></script>`
 
-#### Tested in:
-* Chrome 46
-* Firefox 41
-* Chrome (for Android) 46
-* Safari 7.0.3
+* `<link rel="stylesheet" href="dist/materialToast.css">`
+* `<script src="dist/materialToast.js"></script>`
+
+### Browser support:
+* Chrome
+* Firefox
+* Safari 7+
+* Chrome for Android
+* Firefox for Android
+* Opera Mobile
+* Safari Mobile 7+
 
 ### Usage
 
-`madtarasToast.show(toastConfig);`
+#### Show toast
+`materialToast.show(toastConfig)`
 
-#### toastConfig properties:
-* innerText {String} **required** - toast's inner text
-* duration - {Number} **optional** (by default 5000) - number of ms toast will be visible for
+ **toastConfig properties:**
+
+* message {String} **required**
+* timeout - {Number or Infinity} **optional** (by default 5000) - number of ms toast will be visible for
 * style - {Object} **optional** - object with css styles to apply to element (this parameter is applied only for current toast. If you want to change styles globally use changeConfig method)
-* actionInnerText - {String} **optional** - action button's inner text
-* actionCallback - {Function} **required if actionInnerText, otherwise optional** - function to invoke, when action button was clicked
+* actionText: - {String} **optional** - action button's inner text
+* actionHandler: - {Function} **required if actionInnerText, otherwise optional** - function to invoke, when action button was clicked
+
+#### Hide toast
+`materialToast.hide()`
+
+#### Changing default timeout and styles
+
+```javascript
+materialToast.changeConfig({
+  'timeout': 3000,
+  'style': {
+    'left': '100px',
+    'background': '#111'
+  }
+})
+```
 
 ---------------
 #### The simplest usage
 
 ```javascript
-madtarasToast.show({
-    'innerText': 'Some message'
-});
+materialToast.show({
+  'message': 'Some message'
+})
 ```
 
 #### With custom duration
 
 ```javascript
-madtarasToast.show({
-    'innerText': 'Some message with custom duration',
-    'duration': 1500
-});
+materialToast.show({
+  'message': 'Some message',
+  'timeout': 1500
+})
 ```
 
 #### With action button and callback function
 
 ```javascript
-madtarasToast.show({
-    'innerText': 'Song added',
-    'actionInnerText': 'undo',
-    'actionCallback': function() {
-        madtarasToast.show({
-            'innerText': 'Undid'
-        });
-    }
-});
+materialToast.show({
+  'message': 'Song added',
+  'actionText': 'undo',
+  'actionHandler': function() {
+    materialToast.show({
+      'message': 'Undid'
+    })
+  }
+})
 ```
 
 #### With custom styles
 
 ```javascript
-madtarasToast.show({
-    'innerText': 'Some message',
-    'style': {
-        'left': '100px',
-        'background': '#111'
-    }
-});
-```
-
-#### Using all functionality
-
-```javascript
-madtarasToast.show({
-    'innerText': 'Song added',
-    'duration': 1500,
-    'style': { 'background': '#111' }
-    'actionInnerText': 'undo',
-    'actionCallback': function() {
-        madtarasToast.show({
-            'innerText': 'Undid',
-            'duration': 1000
-        });
-    }
-});
-```
-
-#### Changing default duration and styles
-
-```javascript
-madtarasToast.changeConfig({
-    'duration': 3000,
-    'style': {
-        'left': '100px',
-        'background': '#111'
-    }
-});
+materialToast.show({
+  'message': 'Some message',
+  'style': {
+    'left': '100px',
+    'background': '#111'
+  }
+})
 ```

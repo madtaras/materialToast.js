@@ -1,15 +1,18 @@
 {
-  "name": "madtaras-toast",
-  "version": "0.1.0",
-  "homepage": "https://github.com/madtaras/madtaras-toast",
+  "name": "materialToast.js",
+  "version": "0.2.0",
+  "homepage": "https://github.com/madtaras/materialToast.js",
   "authors": [
     "Taras Mazurkevych <mad.taras@gmail.com>"
   ],
-  "description": "Library for material design toasts (notifications) without dependencies.",
-  "main": "[\"lib/madtaras-toast.min.js\", \"lib/madtaras-toast.min.css\"]",
+  "description": "Library for creating material design toasts and snackbars without dependencies",
+  "main": "[\"dist/materialToast.js\", \"dist/materialToast.js\"]",
   "keywords": [
     "notifications",
-    "toasts"
+    "material",
+    "design",
+    "toast",
+    "snackbar"
   ],
   "license": "MIT",
   "ignore": [

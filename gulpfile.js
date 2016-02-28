@@ -1,25 +1,34 @@
-var gulp = require('gulp');
+const gulp = require('gulp')
+const merge = require('merge-stream')
 
-var postcss = require('gulp-postcss');
-var autoprefixer = require('autoprefixer');
-var mqpacker = require('css-mqpacker');
-var csswring = require('csswring');
+const autoprefixer = require('gulp-autoprefixer')
+const cssnano = require('gulp-cssnano')
+const uglify = require('gulp-uglify')
 
-gulp.task('css', function () {
-    var processors = [
-        autoprefixer({browsers: ['last 2 versions']}),
-        mqpacker,
-        csswring
-    ];
-    return gulp.src('./src/madtaras-toast.css')
-        .pipe(postcss(processors))
-        .pipe(gulp.dest('./lib'));
-});
+const AUTOPREFIXER_BROWSERS = [
+  'iOS >= 7',
+  'Android >= 4',
+  'ChromeAndroid >= 40',
+  'FirefoxAndroid >= 40'
+]
 
-var uglify = require('gulp-uglify');
+gulp.task('default', () => {
+  gulp.watch('src/**', ['release'])
+})
 
-gulp.task('js', function() {
-  return gulp.src('./src/madtaras-toast.js')
-    .pipe(uglify())
-    .pipe(gulp.dest('./lib'));
-});
+gulp.task('release', () => {
+  'use strict'
+
+  let jsFiles = gulp.src('src/materialToast.js')
+    .pipe(uglify({'mangle': false}))
+    .pipe(gulp.dest('./dist'))
+
+  let cssFiles = gulp.src('src/materialToast.css')
+    .pipe(autoprefixer({
+      'browsers': AUTOPREFIXER_BROWSERS
+    }))
+    .pipe(cssnano())
+    .pipe(gulp.dest('./dist'))
+
+  return merge(jsFiles, cssFiles)
+})

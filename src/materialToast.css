@@ -1,4 +1,4 @@
-.madtaras-toast {
+.material-toast {
     position: fixed;
     left: 12px;
     bottom: 12px;
@@ -23,7 +23,7 @@
 }
 
 @media screen and (max-width: 568px) {
-    .madtaras-toast {
+    .material-toast {
         width: 100vw;
         bottom: 0;
         left: 0;
@@ -31,40 +31,40 @@
     }
 }
 
-.madtaras-toast.madtaras-toast-fade-in {
-    animation-name: madtarasToastFadeIn;
+.material-toast.material-toast-fade-in {
+    animation-name: materialToastFadeIn;
     animation-duration: .3s;
     animation-fill-mode: forwards;
     animation-play-state: running; 
 }
 
-.madtaras-toast.madtaras-toast-fade-out {
-    animation-name: madtarasToastFadeOut;
+.material-toast.material-toast-fade-out {
+    animation-name: materialToastFadeOut;
     animation-duration: .3s;
     animation-fill-mode: forwards;
     animation-play-state: running;
 }
 
-.madtaras-toast.singleline {
+.material-toast.singleline {
     height: 48px;
     min-height: 48px;
     max-height: 80px;
 }
 
-.madtaras-toast.multiline {
+.material-toast.multiline {
     height: 80px;
     min-height: 48px;
     max-height: 80px;
 }
 
-.madtaras-toast_action-btn {
+.material-toast_action-btn {
     margin-left: 24px;
     color: #eeff41;
     cursor: pointer;
     text-transform: uppercase;
 }
 
-@-webkit-keyframes madtarasToastFadeIn {
+@-webkit-keyframes materialToastFadeIn {
     from {
         visibility: hidden;
         transform: translateY(100px);
@@ -75,7 +75,7 @@
     }
 }
 
-@keyframes madtarasToastFadeIn {
+@keyframes materialToastFadeIn {
     from {
         visibility: hidden;
         transform: translateY(100px);
@@ -86,7 +86,7 @@
     }
 }
 
-@-webkit-keyframes madtarasToastFadeOut {
+@-webkit-keyframes materialToastFadeOut {
     from {
         visibility: visible;
         transform: translateY(0);
@@ -97,7 +97,7 @@
     }
 }
 
-@keyframes madtarasToastFadeOut {
+@keyframes materialToastFadeOut {
     from {
         visibility: visible;
         transform: translateY(0);
