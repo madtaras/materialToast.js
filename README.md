@@ -1,6 +1,6 @@
 # MaterialToast.js
 
-###  [Demo](http://madtaras.github.io/materialToast.js/)
+###  [Demo](http://madtaras.github.io/materialtoast.js/)
 
 ### Installation
 
